@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trần Vân Anh</title>
+<title>Trần Vân Anh | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,185 +16,402 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:#eaf4ff;
+background:linear-gradient(135deg,#eaf4ff,#dbeafe,#f0f9ff);
 color:#1e3a5f;
-line-height:1.8;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.bg-circle1{
+position:fixed;
+width:350px;
+height:350px;
+background:#93c5fd;
+border-radius:50%;
+top:-120px;
+right:-120px;
+opacity:0.3;
+filter:blur(30px);
+z-index:-1;
+}
+
+.bg-circle2{
+position:fixed;
+width:300px;
+height:300px;
+background:#60a5fa;
+border-radius:50%;
+bottom:-100px;
+left:-100px;
+opacity:0.25;
+filter:blur(30px);
+z-index:-1;
 }
 
 .container{
-max-width:900px;
+max-width:1050px;
 margin:auto;
-background:#f8fbff;
-padding:40px;
+padding:40px 25px;
 }
 
-.header{
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+min-height:90vh;
+}
+
+.hero-left{
+flex:1;
+min-width:300px;
+animation:fadeLeft 1s ease;
+}
+
+.hero-right{
+flex:1;
 text-align:center;
-margin-bottom:40px;
+animation:fadeRight 1s ease;
 }
 
-.avatar{
-width:230px;
-height:230px;
-object-fit:cover;
-border-radius:20px;
-border:6px solid #8ec5ff;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:#dbeafe;
+color:#2563eb;
+border-radius:999px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
 }
 
 h1{
-font-size:55px;
-margin-top:25px;
-color:#2563eb;
-font-weight:700;
+font-size:58px;
+line-height:1.1;
+color:#0f172a;
+margin-bottom:18px;
 }
 
-.subtitle{
-font-size:24px;
-color:#4b6b8f;
-margin-top:10px;
-}
-
-.section{
-margin-top:50px;
-}
-
-.section-title{
-font-size:40px;
-font-weight:700;
-color:#2563eb;
-margin-bottom:25px;
-text-transform:uppercase;
-}
-
-.text{
-font-size:22px;
-color:#36506f;
-}
-
-.skill{
-margin-bottom:20px;
-}
-
-.skill-name{
-font-size:22px;
-margin-bottom:8px;
-font-weight:500;
-}
-
-.stars{
-font-size:30px;
-color:#3b82f6;
-}
-
-.gray{
-color:#cbd5e1;
-}
-
-.edu-title{
-font-size:28px;
-font-weight:600;
-color:#1d4ed8;
-}
-
-.job{
-margin-bottom:35px;
-}
-
-.job-year{
-font-size:28px;
-font-weight:700;
+.highlight{
 color:#2563eb;
 }
 
-ul{
-padding-left:30px;
-margin-top:10px;
+.hero-text{
+font-size:18px;
+line-height:1.9;
+color:#475569;
+max-width:580px;
 }
 
-li{
-font-size:22px;
-margin-bottom:10px;
-}
-
-.contact-box{
-margin-top:20px;
-}
-
-.contact-item{
+.buttons{
+margin-top:35px;
 display:flex;
-align-items:center;
-margin-bottom:20px;
-font-size:22px;
-word-break:break-word;
+gap:15px;
+flex-wrap:wrap;
 }
 
-.icon{
-width:55px;
-height:55px;
-background:#60a5fa;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-margin-right:15px;
-font-size:26px;
-}
-
-.social{
-margin-top:30px;
-display:flex;
-gap:20px;
-}
-
-.social a{
-width:60px;
-height:60px;
-background:#3b82f6;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
+.btn{
+padding:14px 28px;
+border-radius:14px;
 text-decoration:none;
-font-size:28px;
+font-size:15px;
+font-weight:600;
 transition:0.3s;
 }
 
-.social a:hover{
-transform:scale(1.1);
+.btn-primary{
 background:#2563eb;
+color:white;
+box-shadow:0 10px 25px rgba(37,99,235,0.25);
 }
 
-@media(max-width:768px){
-
-.container{
-padding:25px;
+.btn-primary:hover{
+transform:translateY(-3px);
+background:#1d4ed8;
 }
 
-h1{
-font-size:38px;
+.btn-outline{
+border:2px solid #93c5fd;
+color:#2563eb;
+background:white;
 }
 
-.section-title{
-font-size:30px;
+.btn-outline:hover{
+background:#eff6ff;
 }
 
-.text,
-li,
-.skill-name,
-.contact-item{
-font-size:18px;
+.avatar-box{
+position:relative;
+display:inline-block;
+}
+
+.avatar-glow{
+position:absolute;
+inset:-15px;
+background:linear-gradient(45deg,#60a5fa,#2563eb,#93c5fd);
+border-radius:35px;
+filter:blur(25px);
+opacity:0.45;
 }
 
 .avatar{
-width:180px;
-height:180px;
+position:relative;
+width:340px;
+height:420px;
+object-fit:cover;
+border-radius:35px;
+border:6px solid rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* SECTION */
+
+.section{
+margin-top:90px;
+}
+
+.section-title{
+font-size:34px;
+margin-bottom:28px;
+color:#0f172a;
+position:relative;
+display:inline-block;
+}
+
+.section-title::after{
+content:"";
+position:absolute;
+width:60%;
+height:5px;
+background:#60a5fa;
+left:0;
+bottom:-8px;
+border-radius:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.4);
+padding:35px;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+
+.text{
+font-size:17px;
+line-height:2;
+color:#475569;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
+margin-top:25px;
+}
+
+.skill-card{
+background:white;
+padding:22px;
+border-radius:22px;
+transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+}
+
+.skill-name{
+font-size:18px;
+font-weight:600;
+margin-bottom:12px;
+}
+
+.bar{
+height:10px;
+background:#dbeafe;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(to right,#60a5fa,#2563eb);
+border-radius:20px;
+}
+
+/* TIMELINE */
+
+.timeline{
+position:relative;
+margin-top:25px;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:12px;
+top:0;
+width:3px;
+height:100%;
+background:#93c5fd;
+}
+
+.timeline-item{
+position:relative;
+padding-left:50px;
+margin-bottom:45px;
+}
+
+.timeline-dot{
+position:absolute;
+left:0;
+top:6px;
+width:26px;
+height:26px;
+background:#2563eb;
+border-radius:50%;
+border:5px solid #bfdbfe;
+}
+
+.timeline-year{
+font-size:15px;
+font-weight:600;
+color:#2563eb;
+margin-bottom:8px;
+}
+
+.timeline-title{
+font-size:24px;
+font-weight:700;
+margin-bottom:12px;
+color:#0f172a;
+}
+
+.timeline-text{
+font-size:16px;
+line-height:1.9;
+color:#475569;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.contact-card{
+background:white;
+padding:24px;
+border-radius:24px;
+display:flex;
+align-items:center;
+gap:18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-5px);
+}
+
+.contact-icon{
+width:55px;
+height:55px;
+background:linear-gradient(135deg,#60a5fa,#2563eb);
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+color:white;
+}
+
+.contact-info{
+font-size:15px;
+color:#475569;
+word-break:break-word;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:80px;
+text-align:center;
+font-size:14px;
+color:#64748b;
+padding-bottom:30px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeLeft{
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes fadeRight{
+from{
+opacity:0;
+transform:translateX(50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:40px;
+}
+
+.hero{
+padding-top:40px;
+}
+
+.avatar{
+width:280px;
+height:350px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.card{
+padding:25px;
+}
+
+.text,
+.timeline-text{
+font-size:15px;
 }
 
 }
@@ -205,189 +422,250 @@ height:180px;
 
 <body>
 
+<div class="bg-circle1"></div>
+<div class="bg-circle2"></div>
+
 <div class="container">
 
-<div class="header">
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="badge">
+PORTFOLIO CÁ NHÂN
+</div>
+
+<h1>
+Trần Vân Anh
+<br>
+<span class="highlight">Business Administration</span>
+</h1>
+
+<p class="hero-text">
+Sinh viên năm 4 ngành Quản trị Kinh doanh với định hướng phát triển trong lĩnh vực quản lý vận hành, marketing và phát triển thương hiệu. Yêu thích môi trường sáng tạo, năng động và luôn sẵn sàng học hỏi những điều mới để hoàn thiện bản thân mỗi ngày.
+</p>
+
+<div class="buttons">
+
+<a href="https://www.facebook.com/v.anhtran24" class="btn btn-primary">
+Facebook
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Liên hệ
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="avatar-box">
+
+<div class="avatar-glow"></div>
 
 <img src="avatar.jpg" class="avatar">
 
-<h1>TRẦN VÂN ANH</h1>
-
-<div class="subtitle">
-Sinh viên ngành Quản Trị Kinh Doanh
 </div>
 
 </div>
 
-<div class="section">
+</section>
 
-<div class="section-title">
+<section class="section">
+
+<h2 class="section-title">
 Mục tiêu nghề nghiệp
+</h2>
+
+<div class="card">
+
+<p class="text">
+Tôi mong muốn trở thành một chuyên viên Quản trị Kinh doanh có khả năng thích nghi nhanh với môi trường doanh nghiệp hiện đại, đồng thời phát triển chuyên sâu về kỹ năng quản lý vận hành, chăm sóc khách hàng và xây dựng chiến lược thương hiệu. Với tinh thần cầu tiến và khả năng học hỏi liên tục, tôi luôn mong muốn được trải nghiệm thực tế trong môi trường chuyên nghiệp để hoàn thiện tư duy quản trị cũng như kỹ năng lãnh đạo trong tương lai.
+<br><br>
+Bên cạnh kiến thức chuyên ngành được học tại trường, tôi cũng quan tâm đến các lĩnh vực như truyền thông thương hiệu, quản lý nhân sự và phát triển mô hình kinh doanh trên nền tảng số. Tôi tin rằng sự chủ động, trách nhiệm và sáng tạo chính là những yếu tố quan trọng giúp bản thân phát triển bền vững trong công việc.
+</p>
+
 </div>
 
-<div class="text">
-Trở thành chuyên viên Quản trị Kinh doanh có tư duy chiến lược, khả năng quản lý vận hành và phát triển thương hiệu trong môi trường doanh nghiệp hiện đại. Tôi mong muốn được học hỏi thêm kinh nghiệm thực tế, phát triển kỹ năng quản lý nhân sự, marketing và điều phối hoạt động kinh doanh để đóng góp hiệu quả cho doanh nghiệp trong tương lai.
-</div>
+</section>
 
-</div>
+<section class="section">
 
-<div class="section">
-
-<div class="section-title">
+<h2 class="section-title">
 Kỹ năng
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<div class="skill-name">Quản lý công việc</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
-<div class="skill">
-<div class="skill-name">Quản lý và làm việc nhóm</div>
-<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
-</div>
-
-<div class="skill">
+<div class="skill-card">
 <div class="skill-name">Giao tiếp khách hàng</div>
-<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
 </div>
 
-<div class="skill">
-<div class="skill-name">Tin học văn phòng</div>
-<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
-</div>
-
-<div class="skill">
+<div class="skill-card">
 <div class="skill-name">Marketing cơ bản</div>
-<div class="stars">★ ★ ★ <span class="gray">★ ★</span></div>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
 </div>
 
-<div class="skill">
-<div class="skill-name">Lập kế hoạch công việc</div>
-<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+<div class="skill-card">
+<div class="skill-name">Làm việc nhóm</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
 </div>
 
-<div class="skill">
+<div class="skill-card">
+<div class="skill-name">Tin học văn phòng</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-card">
 <div class="skill-name">Tiếng Anh giao tiếp</div>
-<div class="stars">★ ★ ★ <span class="gray">★ ★</span></div>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
 </div>
 
 </div>
 
-<div class="section">
+</section>
 
-<div class="section-title">
+<section class="section">
+
+<h2 class="section-title">
 Về bản thân
-</div>
+</h2>
 
-<div class="text">
-Tôi hiện là sinh viên năm 4 chuyên ngành Quản trị Kinh doanh tại Trường Đại học Kinh tế – Đại học Huế. Tôi là người có tinh thần trách nhiệm, ham học hỏi và luôn chủ động trong công việc. Trong quá trình học tập và thực tập, tôi đã tích lũy được nhiều kỹ năng về giao tiếp khách hàng, xử lý tình huống và làm việc nhóm. Tôi yêu thích môi trường năng động, sáng tạo và mong muốn phát triển lâu dài trong lĩnh vực quản trị và vận hành doanh nghiệp.
-</div>
+<div class="card">
 
-</div>
-
-<div class="section">
-
-<div class="section-title">
-Học vấn
-</div>
-
-<div class="edu-title">
-Trường Đại học Kinh tế - Đại học Huế
-</div>
-
-<div class="text">
-Chuyên ngành: Quản Trị Kinh Doanh
-<br>
-Sinh viên năm 4
-<br>
-GPA: 3.4/4.0
-</div>
+<p class="text">
+Tôi hiện là sinh viên năm 4 chuyên ngành Quản trị Kinh doanh tại Trường Đại học Kinh tế – Đại học Huế. Trong quá trình học tập, tôi luôn cố gắng duy trì tinh thần chủ động, trách nhiệm và không ngừng học hỏi để phát triển bản thân toàn diện hơn cả về kiến thức lẫn kỹ năng mềm.
+<br><br>
+Tôi là người yêu thích sự sáng tạo, có khả năng thích nghi nhanh với môi trường mới và luôn nghiêm túc trong công việc được giao. Ngoài việc học, tôi thường tham gia các hoạt động nhóm, hỗ trợ tổ chức sự kiện sinh viên và tìm hiểu thêm về marketing, vận hành doanh nghiệp cũng như kỹ năng giao tiếp khách hàng.
+<br><br>
+Tôi tin rằng sự kiên trì, tinh thần cầu tiến và thái độ tích cực chính là nền tảng giúp bản thân tiến xa hơn trong tương lai. Mục tiêu của tôi không chỉ là hoàn thành tốt công việc mà còn tạo ra giá trị tích cực trong môi trường mình làm việc.
+</p>
 
 </div>
 
-<div class="section">
+</section>
 
-<div class="section-title">
-Kinh nghiệm
+<section class="section">
+
+<h2 class="section-title">
+Kinh nghiệm & Hoạt động
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+2023
 </div>
 
-<div class="job">
-
-<div class="job-year">
-2023 - Thực tập lễ tân khách sạn
+<div class="timeline-title">
+Thực tập tại khách sạn
 </div>
 
-<ul>
-<li>Hỗ trợ check-in/check-out cho khách</li>
-<li>Hướng dẫn và chăm sóc khách hàng</li>
-<li>Phối hợp với bộ phận vận hành khách sạn</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-year">
-2024 - Cộng tác viên bán hàng online
-</div>
-
-<ul>
-<li>Hỗ trợ đăng bài sản phẩm trên Facebook</li>
-<li>Tư vấn khách hàng và xử lý đơn hàng</li>
-<li>Theo dõi phản hồi khách hàng</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-year">
-2024 - Thành viên CLB Kỹ năng mềm
-</div>
-
-<ul>
-<li>Tham gia tổ chức sự kiện sinh viên</li>
-<li>Hỗ trợ truyền thông và điều phối hoạt động</li>
-<li>Làm việc nhóm và quản lý thời gian</li>
-</ul>
-
+<div class="timeline-text">
+Hỗ trợ lễ tân và chăm sóc khách hàng, tiếp nhận thông tin đặt phòng, hướng dẫn khách check-in/check-out và phối hợp cùng bộ phận vận hành nhằm nâng cao trải nghiệm khách hàng.
 </div>
 
 </div>
 
-<div class="section">
+<div class="timeline-item">
+<div class="timeline-dot"></div>
 
-<div class="section-title">
+<div class="timeline-year">
+2024
+</div>
+
+<div class="timeline-title">
+Cộng tác viên bán hàng online
+</div>
+
+<div class="timeline-text">
+Hỗ trợ quản lý fanpage bán hàng, đăng tải nội dung sản phẩm, tư vấn khách hàng và theo dõi đơn hàng trên nền tảng mạng xã hội.
+</div>
+
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+2024 - Nay
+</div>
+
+<div class="timeline-title">
+Thành viên CLB Kỹ năng mềm
+</div>
+
+<div class="timeline-text">
+Tham gia tổ chức các hoạt động sinh viên, hỗ trợ truyền thông và xây dựng nội dung cho các chương trình học thuật và kỹ năng.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2 class="section-title">
 Liên hệ
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📞
 </div>
 
-<div class="contact-box">
-
-<div class="contact-item">
-<div class="icon">📞</div>
+<div class="contact-info">
 0797164230
 </div>
 
-<div class="contact-item">
-<div class="icon">✉️</div>
+</div>
+
+<div class="contact-card">
+
+<div class="contact-icon">
+✉️
+</div>
+
+<div class="contact-info">
 22K4020015@hce.edu.vn
 </div>
 
-<div class="contact-item">
-<div class="icon">f</div>
+</div>
+
+<div class="contact-card">
+
+<div class="contact-icon">
+f
+</div>
+
+<div class="contact-info">
 https://www.facebook.com/v.anhtran24
 </div>
 
 </div>
 
-<div class="social">
-
-<a href="https://www.facebook.com/v.anhtran24">f</a>
-
-<a href="#">Z</a>
-
-<a href="#">▶</a>
-
-<a href="#">✉</a>
-
 </div>
 
+</section>
+
+<div class="footer">
+© 2026 Trần Vân Anh Portfolio
 </div>
 
 </div>
