@@ -1,10 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+
 <head>
-  <title>Website của tôi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trần Vân Anh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#eaf4ff;
+color:#1e3a5f;
+line-height:1.8;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#f8fbff;
+padding:40px;
+}
+
+.header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.avatar{
+width:230px;
+height:230px;
+object-fit:cover;
+border-radius:20px;
+border:6px solid #8ec5ff;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+font-size:55px;
+margin-top:25px;
+color:#2563eb;
+font-weight:700;
+}
+
+.subtitle{
+font-size:24px;
+color:#4b6b8f;
+margin-top:10px;
+}
+
+.section{
+margin-top:50px;
+}
+
+.section-title{
+font-size:40px;
+font-weight:700;
+color:#2563eb;
+margin-bottom:25px;
+text-transform:uppercase;
+}
+
+.text{
+font-size:22px;
+color:#36506f;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-name{
+font-size:22px;
+margin-bottom:8px;
+font-weight:500;
+}
+
+.stars{
+font-size:30px;
+color:#3b82f6;
+}
+
+.gray{
+color:#cbd5e1;
+}
+
+.edu-title{
+font-size:28px;
+font-weight:600;
+color:#1d4ed8;
+}
+
+.job{
+margin-bottom:35px;
+}
+
+.job-year{
+font-size:28px;
+font-weight:700;
+color:#2563eb;
+}
+
+ul{
+padding-left:30px;
+margin-top:10px;
+}
+
+li{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.contact-box{
+margin-top:20px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+margin-bottom:20px;
+font-size:22px;
+word-break:break-word;
+}
+
+.icon{
+width:55px;
+height:55px;
+background:#60a5fa;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+margin-right:15px;
+font-size:26px;
+}
+
+.social{
+margin-top:30px;
+display:flex;
+gap:20px;
+}
+
+.social a{
+width:60px;
+height:60px;
+background:#3b82f6;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+font-size:28px;
+transition:0.3s;
+}
+
+.social a:hover{
+transform:scale(1.1);
+background:#2563eb;
+}
+
+@media(max-width:768px){
+
+.container{
+padding:25px;
+}
+
+h1{
+font-size:38px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.text,
+li,
+.skill-name,
+.contact-item{
+font-size:18px;
+}
+
+.avatar{
+width:180px;
+height:180px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <h1>Xin chào 👋</h1>
-  <p>Đây là website đầu tiên của tôi.</p>
+
+<div class="container">
+
+<div class="header">
+
+<img src="avatar.jpg" class="avatar">
+
+<h1>TRẦN VÂN ANH</h1>
+
+<div class="subtitle">
+Sinh viên ngành Quản Trị Kinh Doanh
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Mục tiêu nghề nghiệp
+</div>
+
+<div class="text">
+Trở thành chuyên viên Quản trị Kinh doanh có tư duy chiến lược, khả năng quản lý vận hành và phát triển thương hiệu trong môi trường doanh nghiệp hiện đại. Tôi mong muốn được học hỏi thêm kinh nghiệm thực tế, phát triển kỹ năng quản lý nhân sự, marketing và điều phối hoạt động kinh doanh để đóng góp hiệu quả cho doanh nghiệp trong tương lai.
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Kỹ năng
+</div>
+
+<div class="skill">
+<div class="skill-name">Quản lý và làm việc nhóm</div>
+<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Giao tiếp khách hàng</div>
+<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Tin học văn phòng</div>
+<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Marketing cơ bản</div>
+<div class="stars">★ ★ ★ <span class="gray">★ ★</span></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Lập kế hoạch công việc</div>
+<div class="stars">★ ★ ★ ★ <span class="gray">★</span></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Tiếng Anh giao tiếp</div>
+<div class="stars">★ ★ ★ <span class="gray">★ ★</span></div>
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Về bản thân
+</div>
+
+<div class="text">
+Tôi hiện là sinh viên năm 4 chuyên ngành Quản trị Kinh doanh tại Trường Đại học Kinh tế – Đại học Huế. Tôi là người có tinh thần trách nhiệm, ham học hỏi và luôn chủ động trong công việc. Trong quá trình học tập và thực tập, tôi đã tích lũy được nhiều kỹ năng về giao tiếp khách hàng, xử lý tình huống và làm việc nhóm. Tôi yêu thích môi trường năng động, sáng tạo và mong muốn phát triển lâu dài trong lĩnh vực quản trị và vận hành doanh nghiệp.
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Học vấn
+</div>
+
+<div class="edu-title">
+Trường Đại học Kinh tế - Đại học Huế
+</div>
+
+<div class="text">
+Chuyên ngành: Quản Trị Kinh Doanh
+<br>
+Sinh viên năm 4
+<br>
+GPA: 3.4/4.0
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Kinh nghiệm
+</div>
+
+<div class="job">
+
+<div class="job-year">
+2023 - Thực tập lễ tân khách sạn
+</div>
+
+<ul>
+<li>Hỗ trợ check-in/check-out cho khách</li>
+<li>Hướng dẫn và chăm sóc khách hàng</li>
+<li>Phối hợp với bộ phận vận hành khách sạn</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-year">
+2024 - Cộng tác viên bán hàng online
+</div>
+
+<ul>
+<li>Hỗ trợ đăng bài sản phẩm trên Facebook</li>
+<li>Tư vấn khách hàng và xử lý đơn hàng</li>
+<li>Theo dõi phản hồi khách hàng</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-year">
+2024 - Thành viên CLB Kỹ năng mềm
+</div>
+
+<ul>
+<li>Tham gia tổ chức sự kiện sinh viên</li>
+<li>Hỗ trợ truyền thông và điều phối hoạt động</li>
+<li>Làm việc nhóm và quản lý thời gian</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Liên hệ
+</div>
+
+<div class="contact-box">
+
+<div class="contact-item">
+<div class="icon">📞</div>
+0797164230
+</div>
+
+<div class="contact-item">
+<div class="icon">✉️</div>
+22K4020015@hce.edu.vn
+</div>
+
+<div class="contact-item">
+<div class="icon">f</div>
+https://www.facebook.com/v.anhtran24
+</div>
+
+</div>
+
+<div class="social">
+
+<a href="https://www.facebook.com/v.anhtran24">f</a>
+
+<a href="#">Z</a>
+
+<a href="#">▶</a>
+
+<a href="#">✉</a>
+
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
